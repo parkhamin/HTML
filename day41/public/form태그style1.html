@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/* input 태그의 선택자 -> input[type=타입명]*/
+	input[type=text]{
+		color: red;
+		border: 2px solid blue;
+	}
+	input[type=text]:hover{
+		background-color:yellow;
+	}	
+	input[type=text]:focus{
+		font-size:1.5em;
+	}
+	input[type=submit]{
+		background-color: green;
+		border: none;
+		color: white;
+		padding: 15px 30px;
+	}
+	textarea, input[type=text]{
+		width: 90%;
+		display: block;
+		padding: 6px 10px;
+		margin: 10px 0;
+		border: 2px solid blue;
+		border-radius: 3px;
+	}
+	#subject{
+		height: 100px;
+	}
+</style>
+</head>
+<body>
+	<h2>상품 평</h2>
+	<p>받으신 상품을 평가하세요.</p>
+	<form>
+		<label for="name">이름</label>
+		<input type="text" id="name" placeholder="이름"><br>
+		<label for="email">이메일</label>
+		<input type="text" id="email" placeholder="이메일"><br>
+		<label for="subject">상품평</label>
+		<textarea id="subject" placeholder="상품을 평가해주세요."></textarea>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>

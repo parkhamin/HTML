@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>테이블 속성</title>
+<style>
+/*	border: 경계선
+	border-collapse: 인접한 셀(칸)의 경계선을 합칠지를 지정
+	width, height: 테이블의 가로 세로 길이 지정
+	border-spacing: 셀사이의 거리
+	empty-cells: 공백 셀지정
+	text-align: 셀의 정렬 설정
+*/
+	th, td{
+		border: 2px solid blue;
+		border-collapse: collapse; /* collapse-> 단일선, separate-> 분리 */
+		background-color: blue;
+		color: white;
+		text-align: center;
+	}
+	table{width:100%}
+	th{height: 30px;}
+	caption{caption-side: bottom;}
+			/* 테이블 제목의 위치를 지정 bottom | top | inherit */
+	tr:nth-chile(2n-1){background-color:yellow;}
+	/* nth-chile(수식|행번호|even|odd)-> 행을 선택할 수 있음 */
+	tr:hover{background-color:red;}
+</style>
+</head>
+<body>
+	<table>
+		<caption>성적 리스트</caption>
+		<thead>
+			<tr>
+				<th>학번</th>
+				<th>이름</th>
+				<th>성적</th>
+				<th>학점</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>James</td>
+				<td>98</td>
+				<td>A+</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>wade</td>
+				<td>88</td>
+				<td>B+</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Anthony</td>
+				<td>78</td>
+				<td>C+</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
