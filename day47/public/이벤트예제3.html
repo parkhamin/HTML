@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function onMouse(elem){	elem.style.border = "3px solid red";	}
+	function outMouse(elem){	elem.style.border = "";	}
+</script>
+
+</head>
+<body>
+<div style="background-color:yellow; width:200px;"
+	onmouseover = "onMouse(this)" onmouseout="outMouse(this)">
+	마우스를 요소 위로 이동하세요.
+</div>
+</body>
+</html>

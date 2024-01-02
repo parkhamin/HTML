@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function get(){
+		let s = document.getElementById("a").innerHTML;
+		alert(s);
+	}
+	function set(b){
+		document.getElementById("a").innerHTML= b;		
+	}
+
+</script>
+</head>
+<body>
+<div id="a">div영역</div>
+<a href="#" onclick="get()" >div 출력하기</a><br>
+<a href="#" onclick="set('변경되었습니다.')">div 변경하기</a><br>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>계산기</title>
+<style>
+	.b {	width: 50px; height: 50px; padding: 10px;	}
+</style>
+<script>
+	function f1(op){
+		let num1 = parseFloat(document.getElementById("n1").value);
+		let num2 = parseFloat(document.getElementById("n2").value);
+		
+		if ( op == "+" )
+			document.getElementById("result").value = num1+num2;
+		
+		if ( op == "-" )
+			document.getElementById("result").value = num1-num2;
+		
+		if ( op == "*" )
+			document.getElementById("result").value = num1*num2;
+		
+		if ( op == "/" )
+			document.getElementById("result").value = num1/num2;
+	}
+</script>
+</head>
+<body>
+숫자1:<input type="text" id="n1" value=""><br>
+숫자2:<input type="text" id="n2" value=""><br>
+<input type="button" value="+" class="b" onclick="f1('+')">
+<input type="button" value="-" class="b" onclick="f1('-')">
+<input type="button" value="*" class="b" onclick="f1('*')">
+<input type="button" value="/" class="b" onclick="f1('/')">
+<br>
+연산결과:<input type="text" id="result" value=""><br>
+</body>
+</html>

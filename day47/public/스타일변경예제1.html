@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	let mode = "white";
+	function f1(){
+		let element = document.getElementsByTagName("body")[0]; 
+		if ( mode == "white" ){
+			element.style.background = "black";
+			element.style.color = "white";
+			mode = "black";
+		}else{
+			element.style.background = "white";
+			element.style.color = "black";
+			mode = "white";
+		}		
+	}
+</script>
+</head>
+<body>
+	<h1>다크 모드와 라이트 모드</h1>
+	<p>버튼을 누르면 다크 모드와 라이트 모드가 토글됩니다.</p>
+	<button onclick="f1()">다크모드 토글</button> 
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	div, p {	margin: 10px;	border: 1px solid rgb(199,89,25);	}
+</style>
+</head>
+<body>
+	<div id="div1">DIV
+		<p id="p1">P</p>	
+	</div>
+	
+	<script>
+	// 버블링(bubbling) -> 원소가 겹쳐진 경우, 가장 안쪽 원소의 이벤트가 먼저 처리되게 하는 방식
+	// 캡처링(capturing) -> 가장 바깥쪽 원소의 이벤트가 먼저 처리되게 하는 방식
+	//ex) addEventListener(이벤트, 함수, true) -> 캡처링
+	//ex) addEventListener(이벤트, 함수) -> 버블링
+	
+	
+		let elem1 = document.getElementById("div1");
+		let elem2 = document.getElementById("p1");
+		
+		elem1.addEventListener("click", function(){alert('캡처링 div')}, true );
+		elem1.addEventListener("click", function(){alert('버블링 div')});
+		
+		elem2.addEventListener("click", function(){alert('캡처링 div')}, true );
+		elem2.addEventListener("click", function(){alert('버블링 div')});
+	</script>
+</body>
+</html>

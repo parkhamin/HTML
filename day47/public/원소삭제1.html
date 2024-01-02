@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function removeNode(){
+		let parentNode = document.getElementById("target");
+		let childNode = document.getElementById("p1");
+		
+		parentNode.removeChild(childNode);
+	}
+</script>
+</head>
+<body>
+<div id="target">
+	<p id="p1">1st paragraph</p>
+	<p id="p2">2nd paragraph</p>
+</div>
+<button onclick="removeNode()">누르시오.</button>
+</body>
+</html>

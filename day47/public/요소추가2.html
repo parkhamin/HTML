@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function addNode(text){
+		let node = document.createElement("p"); // 노드생성
+		node.innerHTML = text;
+		let parentNode = document.getElementById("target"); // 위치 지정
+		parentNode.appendChild(node); // 노드 추가
+	}
+
+</script>
+</head>
+<body>
+<div id="target" onclick = "addNode('동적으로 추가된 노드입니다.')">클릭하시오.</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="p1">This is a paragraph.</p>
+<script>
+	function change(){
+		let element = document.getElementById("p1");
+		element.style.color = "red";
+		element.style.fontFamily = "Century";
+		element.style.fontStyle = "italic";
+	}
+</script>
+<input type="button" onclick="change()" value="click">
+</body>
+</html>

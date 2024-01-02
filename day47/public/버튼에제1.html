@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	function switch_image(){
+		let element = document.getElementById("image");
+		if ( element.src.match("sw_on") )
+			element.src = "sw_off.png";
+		else 			
+			element.src = "sw_on.png";
+	}
+</script>
+<img id="image" src="sw_off.png" onclick="switch_image()">
+<p>스위치를 클릭하여 보세요!</p>
+</body>
+</html>
