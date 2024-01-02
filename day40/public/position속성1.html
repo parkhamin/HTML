@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/*	position 속성
+	-> absolute, fixed(화면을 기준으로) -> 절대 위치 좌표
+	-> relative(초기 위치에서 상하좌우 지정), static(위에서 아래로 순서대로)-> 상대 위치 좌표
+	
+	top(위), bottom(아래), left(좌), right(우)
+	z-index: 겹칠 경우 숫자가 클수록 앞에 위치
+*/
+	.box{width: 100px; height: 100px; position: absolute;}
+	.box:nth-child(1){background-color: red; left: 10px; top: 10px; z-index:3;}
+	.box:nth-child(2){background-color: green; left: 50px; top: 50px; z-index:2;}
+	.box:nth-child(3){background-color: blue; left: 90px; top: 90px; z-index:1;}
+</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</body>
+</html>
