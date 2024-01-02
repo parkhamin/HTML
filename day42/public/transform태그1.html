@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/* transform 속성 -> 도형을 이동, 크기변환, 회전
+   transform: translate(픽셀, 픽셀) -> 이동
+   transform: rotate(각도deg) -> 회전
+   transform: scale(가로배수, 세로배수) -> 크기 변환
+   transform: skew(각도deg, 각도deg) -> 비틀기 변환
+*/
+
+	div{
+		width: 50px; height: 50px; background-color: yellow;
+		border: 1px solid black; text-align: center;
+	}
+	
+	#b2{transform: translate(100px, 50px); background-color: blue;}
+	#b3{transform: rotate(-30deg); background-color: red;}
+	#b4{transform: scale(1.2, 1.5); background-color: green;}
+	#b5{transform: skew(10deg, 20deg); background-color: cyan;}
+   </style>
+</head>
+<body>
+	<div id="b1">BOX1</div>
+	<div id="b2">BOX2</div>
+	<div id="b3">BOX3</div>
+	<div id="b4">BOX4</div>
+	<div id="b5">BOX5</div>
+</body>
+</html>

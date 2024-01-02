@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+body{
+	background-color: cyan;
+	font-family: Arial, sans-sefif;
+	margin: 0;
+}
+
+header{
+	background-color: #e3afed;
+	color: #000000;
+	margin: 0;
+	text-align: center;
+	padding: 5px;
+}
+
+nav{
+	float: left;
+	width: 30%;
+	height: 400px;
+	background-color: #ffd800;
+}
+
+section{
+	float: right;
+	width: 70%;
+	height: 400px;
+	background-color: yellow;
+}
+
+footer{
+	background-color: #954b4b;
+	color: #efe5d0;
+	padding: 10px;
+	margin: 0 0 0 0;
+	font-size: 90%;
+	text-align: center;
+	clear: both; /* clear -> float 속성을 해제하는 속성 */
+}
+
+</style>
+</head>
+<body>
+	<header>
+		<h1>My Page</h1>
+	</header>
+	<nav>
+		<h1>Links</h1>
+		<ul>
+			<li><a href="#">링크1</a></li>
+			<li><a href="#">링크2</a></li>
+			<li><a href="#">링크3</a></li>
+		</ul>
+		<figure>
+			<img width="85" height="85" src="man.png" alt="홍길동">
+			<figcaption>홍길동</figcaption>
+		</figure>
+	</nav>
+	<section id="main">
+		<article>
+			<h1>Semantic Tags</h1>
+			<p>시맨틱 요소(Semantic elements)들은 브라우저에서 요소의 의미나 목적을 명확하게 알려주는 요소이다.</p>
+		</article>
+		<article>
+			<h1>div와 span</h1>
+			<p>div는 "divide"의 약자로 페이지의 논리적 섹션을 분리하는데 사용되는 태그이다. span은 인라인
+			요소로서 텍스트들을 위한 컴테이너로 사용할 수 있다.</p>
+		</article>
+	</section>
+	<footer>Copyright(c) 2023 Hong</footer>
+</body>
+</html>

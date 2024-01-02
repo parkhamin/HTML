@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	div{width:100px; height: 100px;}
+	#a{border: 5px solid black;}
+	#b{
+		background-color: red;
+		/*transform: translateX(50px) rotate(60deg); */
+		/*transform: rotate(60deg) translateX(50px); */
+		
+		/*변환한 순서에 따라 모습이 차이날 수 있음 */
+		
+		/*변환하는 기준을 지정
+			: 기본값은 center
+			: left right top bottom의 조합으로 지정
+		*/
+		transform-origin: right bottom;
+		
+		transform: rotate(60deg);
+	}
+
+</style>
+</head>
+<body>
+	<div id="a">
+		<div id="b"></div>
+	</div>
+</body>
+</html>

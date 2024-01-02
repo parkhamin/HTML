@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/*
+animation-timing-function 속성으로 속도 효과(easing effect)를 지정할 수 있음
+linear -> 일정한 속도
+ease -> 느리게 시작하여 점점 빨라지다 다시 느려짐
+ease-in -> 속도가 증가
+ease-out -> 속도가 감소
+*/
+div {
+	width: 100px;
+	height: 50px;
+	color: white;
+	position: relative;
+	animation: ani 5s infinite;
+}
+
+#a {
+	background: red;
+	animation-timing-function: linear;
+}
+
+#b {
+	background: blue;
+	animation-timing-function: ease;
+}
+
+#c {
+	background: yellow;
+	animation-timing-function: ease-in;
+}
+
+#d {
+	background: green;
+	animation-timing-function: ease-out;
+}
+
+@keyframes ani{
+	from{left: 0px;}
+	to{left: 500px;}
+}
+</style>
+</head>
+<body>
+	<div id="a">linear</div>
+	<div id="b">ease</div>
+	<div id="c">ease-in</div>
+	<div id="d">ease-out</div>
+</body>
+</html>

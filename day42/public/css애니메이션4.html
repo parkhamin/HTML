@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+img {
+	display: block;
+	position: relative;
+	width: 100px;
+	height: 20px;
+	margin: 20px;
+	animation: race 5s infinite;
+}
+
+#rabbit {
+	animation-timing-function: ease-out;
+}
+
+#turtle {
+	animation-timing-function: ease-in;
+}
+
+@keyframes race {
+	from {left: 0px;}
+
+to {
+	left: 100px;
+}
+}
+</style>
+</head>
+<body>
+	<img id="rabbit" src="rabbit.png">
+	<img id="turtle" src="turtle.png">
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/* 3D transform 메서드
+	translate3D(x,y,z) -> 3차원 이동
+	translateX(x) -> 3차원 이동(x축)
+	translateY(y) -> 3차원 이동(y축)
+	translateZ(z) -> 3차원 이동(z축)
+	
+	scale3D(x,y,z) -> 3차원 크기변환
+	scaleX(x) -> 3차원 크기변환(x축)
+	scaleY(y) -> 3차원 크기변환(y축)
+	scaleZ(z) -> 3차원 크기변환(z축)
+	
+	rotate3D(x,y,z,각도) -> 3차원 회전
+	rotateX(x) -> 3차원 회전(x축)
+	rotateY(y) -> 3차원 회전(y축)
+	rotateZ(z) -> 3차원 회전(z축)
+	
+	perspective(픽셀) -> 원근변환
+*/
+
+	div{
+		background-color: green;
+		height: 150px;
+		width: 150px;
+	}	
+	
+	.a{background-color: yellow; border: 1px solid black;}
+	.b{
+		backface-visibility: visible; /* 뒷면이 보이게 하는 속성 */
+		transform: perspective(500px) rotateY(60deg);
+	}
+</style>
+</head>
+<body>
+	<div class="a">
+		<div class="b"></div>
+	</div>
+</body>
+</html>

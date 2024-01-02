@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>BALL</title>
+<style>
+div{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: red;
+	border-radius: 50px;
+	/* animation: bounce 5s infinite; */
+	animation-name: bounce;
+	animation-iteration-count: infinite;
+	animation-duration: 5s;
+}
+
+@keyframes bounce{
+	from, to{
+		bottom: 0px;
+		animation-timing-function: ease-out;
+		}
+	50%{
+		bottom: 200px;
+		animation-timing-function: ease-in;
+	}
+}
+
+
+</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+	div{
+		width: 50px; height: 50px;
+		background-color: yellow;
+		border: 1px solid black;
+		text-align: center;
+	}
+	
+	#b2{
+		/*변환행렬 [a b c d e f] == matrix(a,b,c,d,e,f)을 지정하여
+		  rotate, scale, translate, skew를 동시에 할 수 있음.
+		  -> 2D transform
+		*/
+		transform: matrix(0.9, 0.5, -0.5, 0.9, 0, 0);
+		background-color: blue;
+	}
+</style>
+</head>
+<body>
+	<div id="b1">BOX1</div>
+	<div id="b2">BOX2</div>
+</body>
+</html>

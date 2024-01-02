@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/* transistion 속성을 이용해서 간단한 애니메이션 효과를 만들 수 있음.
+   -> keyframe을 지정해야함
+*/
+	
+div{
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: relative;
+	
+	animation: 5s ani; /* 애니메이션 속성: 지속시간 키프레임 */
+	animation-iteration-count: 5; /* 애니메이션 반복 횟수 */
+}
+@keyframes ani{
+	0%{left: 0px; top: 0px;}
+	25%{left: 100px; top: 0px;}
+	50%{left: 200px; top: 0px;}
+	75%{left: 100px; top: 0px;}
+	0%{left: 0px; top: 0px;}
+}
+</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>
