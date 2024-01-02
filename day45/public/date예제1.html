@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 id="a"></h1>
+	<script>
+		function Xmas(){
+			let now = new Date();
+			//let xmas = new Date("12/25/2023");
+			
+			let xmas = new Date(2023,5,17,17,50,0);
+			let remain= xmas.getTime()-now.getTime();
+			// 0.789초
+			let ms = Math.floor(remain%1000); // 23456789%1000
+			remain = remain/1000;			// 23456000 / 1000 == 23456초
+			
+			let sec = Math.floor(remain%60);
+			remain = remain/60;
+			
+			let m = Math.floor(remain%60);
+			remain = remain/60;
+			
+			let h = Math.floor(remain%24);
+			remain = remain/24;
+			
+			let d = Math.floor(remain);
+			
+			//let str = `금년 크리스마스까지 ${d}일 ${h}시간 ${m}분 ${sec}초 남았습니다.`;
+			let str = `수업종료까지 ${h}시간 ${m}분 ${sec}초 남았습니다.`;
+			document.getElementById("a").innerHTML = str;
+			
+			setTimeout('Xmas', 1000);
+			// 타이머 설정 -> setTimeout(함수, 밀리초);
+		}
+		Xmas();
+	</script>
+</body>
+</html>

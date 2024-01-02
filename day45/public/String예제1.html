@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="a">다음에 학습할 내용은 HTML입니다.</p>
+	<button onclick="f1()">HTML 학습을 끝냈으면 누르시오</button>
+	<script>
+		function f1(){
+			let s = document.getElementById("a").innerHTML;
+			document.getElementById("a").innerHTML = s.replace("HTML", "JAVASCRIPT");
+		}
+	
+	</script>
+</body>
+</html>

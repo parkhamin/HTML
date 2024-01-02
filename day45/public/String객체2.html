@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script>
+// 		let str = "apple";
+		
+// 		document.writeln(str.length); // 문자열의 길이
+// 		document.writeln(str[0]); // 문자열의 각 문자에 접근하려면 배열 표현을 사용
+// 		document.writeln(str[4]);
+	function idcheck(){
+		let s = document.getElementById("id").value;
+		if(s.length<6) alert("아이디는 6글자 이상이어야 합니다.");
+	}
+	</script>
+</head>
+<body>
+
+	아이디: <input type="text" id="id" size="10">
+	<button onclick="idcheck()">검사</button>
+</body>
+</html>

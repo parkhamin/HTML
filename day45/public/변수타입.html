@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		let a = 10;
+		var b = 10;
+		for(let i=0; i<3; i++){
+			let a = 20; // let은 {}안에서 재선언이 안됨
+			var b = 20; // var는 {}안에서 재선언이 가능
+		}
+		document.write(a+" "+b);
+	</script>
+</body>
+</html>

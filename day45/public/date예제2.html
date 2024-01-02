@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 id="a"></h1>
+	<script>
+		function clock() {
+			let now = new Date();
+			let str = now.getHours() + ":" + now.getMinites() + ":"
+					+ now.getSeconds();
+
+			document.getElementById("a").innerHTML = str;
+
+			setTimeout('clock()', 2000);
+		}
+		clock();
+	</script>
+</body>
+</html>

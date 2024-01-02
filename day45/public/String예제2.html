@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<p id="a">One,Two,Three,Four,Five</p>
+	<script>
+		let s = document.getElementById("a").innerHTML;
+		let arr = s.split(",");
+		
+		for(let i=0; i<arr.length; i++)
+			document.write(i+"-"+arr[i]+"<br>")
+	</script>
+</body>
+</html>

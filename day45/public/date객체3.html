@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		let date1 = new Date("05/17/2023");
+		let date2 = new DAte("06/17/2023");
+		
+		//.getTime()-> 1970년 1월 1일 0시0분0초 누적된 시간을 리턴, 단위 밀리초
+		//             유닉스(Unix) 시간
+		//Unix 운영체제-> 세계 최초의 범용 운영체제, 켄 톰스와 데니스 리치-> c언어
+		
+		let ms = date2.getTime()-date1.getTime();
+		let day = ms(1000*60*60*24);
+		
+		document.write(date1+"<br>"+date2+"<br>"+ms+"<br>"+day+"일");
+	</script>
+</body>
+</html>
