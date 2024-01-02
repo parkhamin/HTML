@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Array메서드들</h1>
+concat() -> 배열1.concat(배열2) : 배열1과 배열2를 합침<br>
+indexOf() -> 배열에서 값에 해당하는 인덱스를 리턴<br>
+push() -> 배열의 제일 마지막에 원소를 추가<br>
+pop() -> 배열의 제일 마지막에 원소를 삭제<br>
+shift() -> 배열을 왼쪽으로 한칸씩 이동, 제일 처음소는 삭제됨(삭제되면서 리턴)<br> 
+sort() -> 배열을 정렬<br>
+slice() -> 배열의 일부를 복사<br>
+join() -> 배열의 원소를 합쳐서 하나의 문자열로 리턴<br>
+<script>
+	let a = [1,2,3];
+	//let b = [4,5,6];
+	let b = 4;
+	let c = a.concat(b);
+	
+	document.write(c + "<br>");
+	
+	let d = ["apple","banana","orange"];
+	document.write(d.indexOf("banana") + "<br>");
+	
+	document.write(d.pop() + "<br>");
+	document.write(d + "<br>");
+	d.push("cherry");
+	document.write(d + "<br>");
+	
+	let f = [1,2,3,4,5,6,7,8,9,10];
+	document.write(f.shift() + "<br>");
+	document.write(f + "<br>");
+	
+	let arr = [1,5,2,4,3];
+	document.write(arr + "<br>");
+	arr.sort();
+	document.write(arr + "<br>");
+	
+	arr = [1,2,3,4,5,6,7,8,9,10];
+	let arr2 = arr.slice(5,7); // slice(인덱스) -> 인덱스부터 끝까지 copy
+						// slice(인덱스1,인덱스2) -> 인덱스1~인덱스2-1까지 copy
+	document.write(arr2 + "<br>");
+	
+	d = ["apple","banana","orange"];
+	let s = d.join("+");	// join(문자열) -> ,대신 문자열이 원소들 사이에 기입됨
+							// join() -> 원소들 중간에 ,가 기입됨
+	document.write(s+1 + "<br>");
+						
+
+</script> 
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+자바스크립트 배열의 특징 <br>
+1. 크기가 자동으로 증가함 -> java의 리스트와 유사함<br>
+2. 여러가지 자료형을 혼합해서 저장할 수 있음. -> java의 Object클래스와 유사<br>
+
+<script>
+let arr = new Array();
+
+arr[0] = 1;
+arr[1] = true;
+arr[2] = 3.14;
+arr[3] = "apple";
+arr[4] = new Date();
+
+for ( i=0 ; i < arr.length ; i++ )
+	document.write(arr[i]+"<br>");
+
+</script>
+
+
+</body>
+</html>

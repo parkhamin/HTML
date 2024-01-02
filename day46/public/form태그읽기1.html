@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function process(){
+		let obj = document.getElementById("a");
+		alert( obj.value );
+	}
+// 프로퍼티
+// : getX, setX (접근자나 설정자)를 좀 더 단순화 시킨 것
+// : 필드명만으로 값에 변경하거나 읽어오는 것
+
+</script>
+</head>
+<body>
+	<form>
+		<input type="text" id="a" >
+		<input type="submit" value="제출" onclick="process()" >	
+	</form>
+</body>
+</html>

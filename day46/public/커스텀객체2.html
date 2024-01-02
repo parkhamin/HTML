@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id = "a"></h1>
+<script>
+
+	class Dog{// 클래스 정의
+		constructor(name, year){ // 생성자 정의
+			this.name = name; // 필드 선언
+			this.year = year;			
+		}
+		age(){ // 메서드 정의
+			let date = new Date();
+			let b = date.getFullYear()-this.year;
+			return b;
+		}
+	}
+	let myDog = new Dog("money", 2002 );
+	let str = `강아지 이름은 ${myDog.name} 이고 나이는 ${myDog.age()}살입니다.`
+	document.getElementById("a").innerHTML = str;
+</script>
+
+</body>
+</html>

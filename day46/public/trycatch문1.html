@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	let msg ="";
+	
+	function test(){
+		try{
+			alertt("Hello javascript!");
+		}catch( e ){
+			msg = "다음과 같은 예외가 발생하였음: "+ e.message;
+			alert(msg);
+		}		
+	}
+
+</script>
+</head>
+<body>
+	<input type="button" value="try-catch test" onclick="test()">
+</body>
+</html>

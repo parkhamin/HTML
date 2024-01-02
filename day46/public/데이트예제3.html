@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function check(){
+		let s = document.getElementById("a").value;		
+		let sdate = new Date(s);
+		let today = new Date();
+		
+		let d = today.getTime()-sdate.getTime();
+		let day = Math.floor( d / ( 1000*60*60*24 ) );
+		
+		let str = "";		
+		if ( day > 30 ) str = "교환기간이 지났습니다.";
+		else str = "교한 가능합니다.";
+		
+		alert(str);
+	}
+</script>
+</head>
+<body>
+	구일일: <input type="date" id="a">
+	<button onclick="check()">검사</button>
+</body>
+</html>

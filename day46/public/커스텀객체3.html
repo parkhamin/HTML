@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="a"></h1>
+<h1 id="b"></h1>
+
+<script>
+	class Animal{
+		constructor(weight){
+			this.weight = weight;
+		}
+	}
+	class Dog extends Animal{
+		constructor(name,year,weight){
+			super(weight);
+			this.name=name;
+			this.year=year;
+		}
+		age(){ // 메서드 정의
+			let date = new Date();
+			let b = date.getFullYear()-this.year;
+			return b;
+		}
+	}
+	let myDog = new Dog("money", 2002, 10);
+	
+	let str = `강아지 이름은 ${myDog.name} 이고 나이는 ${myDog.age()}살입니다.`
+	document.getElementById("a").innerHTML = str;
+	
+	str = `체중은 ${myDog.weight} kg입니다.`;
+	document.getElementById("b").innerHTML = str;
+
+</script>
+
+</body>
+</html>
+
+
+

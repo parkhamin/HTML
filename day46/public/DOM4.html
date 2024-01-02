@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<p>CSS 선택자로 HTML element를 찾기 -> document.querySelectorAll()</p>
+
+<p class="a">1st class a</p>
+<p class="a">2nd class a</p>
+<p class="a">3rd class a</p>
+
+<script>
+	let arr = document.querySelectorAll("p.a");
+	document.write(arr[0].innerHTML +"<br>");
+	document.write(arr[1].innerHTML +"<br>");
+	document.write(arr[2].innerHTML +"<br>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function get(){
+		let list = document.getElementsByName("color");
+					// element들을 배열로 리턴
+		for ( i = 0 ; i < list.length ; i++ ){
+			if ( list[i].checked ){ // checked -> 체크되었으면 true 아니면 false
+				document.getElementById("result").value = list[i].value;
+				break;
+			}
+		}		
+	}
+</script>
+</head>
+<body>
+<input type="radio" name="color" value="red" checked>RED<br>
+<input type="radio" name="color" value="blue">BLUE<br>
+<input type="radio" name="color" value="green">GREEN<br>
+<input type="button" value="click" onclick="get()">
+<input type="text" value="" id="result">
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function get(){
+		let obj = document.getElementById("ch");
+		let obj2 = document.getElementById("result");
+		if ( obj.checked ) obj2.value ="동의하였습니다.";
+		else obj2.value ="동의하지 않았습니다.";		
+	}
+
+</script>
+</head>
+<body>
+	<input type="checkbox" id = "ch">동의합니다.<br>
+	<input type="button" onclick="get()" value="클릭">
+	<input type="text" id="result" value="">
+</body>
+</html>

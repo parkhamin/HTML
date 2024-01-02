@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+아이디로 element 찾기 -> getElementById() <br>
+태그이름으로 element 찾기 -> getElementsByTagName() <br>
+-> 이름에 해당하는 모든 element를 배열로 리턴
+
+<p>1st p element</p>
+<p>2nd p element</p>
+<p>3rt p element</p>
+<h1 id = "a"></h1>
+
+<script> 
+	let arr = document.getElementsByTagName("p");
+	let str = arr[2].innerHTML;
+		
+	document.getElementById("a").innerHTML = str;
+</script>
+</body>
+</html>

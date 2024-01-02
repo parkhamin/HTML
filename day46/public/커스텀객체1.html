@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>사용자 객체(Custom Object)</h1>
+사용자 객체를 생성하는 방법<br>
+1. 객체 리터럴로 직접 생성 -> 객체하나만 생성가능 <br>
+2. 생성자 함수를 정의 해서 생성 -> 객체를 여러개 생성가능 <br>
+3. class키워드로 자바처럼 클래스를 정의해서 객체를 생성(ES6에서 도입) -> 여러개 생성가능 <br>
+
+
+<script>
+let car = {
+		model: "520d",
+		speed: 60,
+		color: "red",
+		
+		brake: function() { this.speed -= 10 },
+		accel: function() { this.speed += 10 }		
+};
+document.write( car.model+"<br>");
+car.color = "blue";
+document.write( car.color+"<br>");
+car.brake();
+document.write( car.speed+"<br>");
+
+function Car(model,speed,color){
+	this.model = model;
+	this.speed = speed;
+	this.color = color;
+	this.brake= function() { this.speed -= 10 }
+	this.accel= function() { this.speed += 10 }
+}
+let a = new Car("520d",60,"red");
+let b = new Car("420d",50,"yellow");
+let c = new Car("320d",40,"blue");
+
+
+
+
+</script>
+
+</body>
+</html>

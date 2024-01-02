@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	let answer = 30;
+	function test(){
+		try{
+		let x = document.getElementById("number").value;
+		
+		document.getElementById("b").innerHTML= typeof x;		
+		
+		if ( x == "" ) throw "입력없음";
+		if ( isNaN(x) ) throw "숫자가 아님";
+		if ( x > answer) throw "너무 큼"; 
+		if ( x < answer) throw "너무 작음"; // 20
+		if ( x == answer) throw "성공";
+		}catch( e ){
+		let s = document.getElementById("msg");
+		s.innerHTML = "힌트: " + e;
+		}
+	}
+
+</script>
+</head>
+<body>
+	<h1>throw문</h1>
+	프로그래머가 직접 예외를 생성할 수 있게함.
+	<br>
+
+	<h1>Number Guess</h1>
+	<p>1부터 100사이의 숫자를 입력하시오.</p>
+	<input id="number" type="text">
+	<button onclick="test()">숫자 추측</button>
+	<p id="msg"></p>
+	
+	<h2 id="b"></h2>
+</body>
+</html>

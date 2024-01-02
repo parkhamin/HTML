@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function process(){
+		let s = document.getElementById("ta1").value;
+		document.getElementById("ta2").value = s;
+	}
+</script>
+</head>
+<body>
+<textarea id = "ta1" rows="5" cols="20">textarea</textarea>
+<input type="button" value="클릭" onclick="process()">
+<textarea id = "ta2" rows="5" cols="20"></textarea>	
+
+</body>
+</html>

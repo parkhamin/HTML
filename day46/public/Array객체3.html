@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 id="a"></h1>
+<script>
+	let id = [ "kim","lee","park"];
+	let person = prompt("아이디를 입력하시오.","");
+	
+	document.getElementById("a").innerHTML = "로그인 실패";
+	
+	for ( i = 0 ; i < id.length ; i++ ){
+		if ( person == id[i] ){
+			document.getElementById("a").innerHTML = "로그인 성공";
+			break;
+		}		
+	}	
+</script>
+</body>
+</html>

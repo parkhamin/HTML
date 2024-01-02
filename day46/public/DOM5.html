@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body> <!-- div의 parent node -->
+	<div>
+		<p>fruit list</p> <!-- div의 child node -->
+		<ul> <!-- div의 child node -->
+			<li>apple</li> <!-- sibling -->
+			<li>banana</li> <!-- sibling -->
+			<li>orange</li> <!-- sibling -->
+		</ul>
+	</div>
+	<!-- 
+children -> 자시노드들의 배열을 리턴<br>
+firstElementChild -> 첫번째 자식노드가 리턴<br>
+lastElementChild -> 마지막 자식노드가 리턴<br>
+parentNode -> 부모노드가 리턴<br>
+	 -->
+<script>
+		let arr = document.getElementsByTagName("ul");
+		let childarr = arr[0].children;
+						
+		document.write( childarr[0].innerHTML+"<br>" );
+		document.write( childarr[1].innerHTML+"<br>" );
+		document.write( arr[0].firstElementChild.innerHTML+"<br>" );
+		document.write( arr[0].lastElementChild.innerHTML+"<br>" );
+		
+		document.write( arr[0].parentNode+"<br>" );
+</script>
+	
+</body>
+</html>

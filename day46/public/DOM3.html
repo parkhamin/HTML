@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li>List item1</li>
+	<li>List item2</li>
+	<li>List item3</li>
+	<li>List item4</li>
+	<li>List item5</li>
+</ul>
+<script>
+	let list = document.getElementsByTagName('ul');
+	let arr = list[0].getElementsByTagName('li');
+	
+	for ( i = 0 ; i < arr.length ; i++ ){
+		document.write(arr[i].innerHTML+"<br>");
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

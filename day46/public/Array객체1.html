@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+배열(array) : 같은 타입의 자료가 여러개 나열된 것 -> 인덱스(순서)가 있음 -> 인덱스는 0번부터
+java -> 배열 크기가 고정
+javascipt -> 배열 크기가 고정되지 않음
+<br>
+<script>
+// 배열 생성방법1 -> []을 이용
+let fruit = ["apple", "banana", "orange"];
+
+for ( i = 0 ; i < fruit.length ; i++ )
+	document.write(fruit[i] + "<br>");
+
+//배열 생성방법2 -> Array()생성자의 인자로 배열의 요소를 기입
+let arr = new Array("apple","banana","orange");
+
+for ( i = 0 ; i < arr.length ; i++ )
+	document.write(arr[i] + "<br>");
+
+// 배열 생성방법3 -> 생성자로 배열을 만든뒤 원소를 직접 입력 
+let arr2 = new Array();
+arr2[0] = "apple";
+arr2[1] = "banana";
+arr2[2] = "orange";
+arr2[3] = "cherry";
+
+for ( i = 0 ; i < arr2.length ; i++ )
+	document.write(arr2[i] + "<br>");
+</script>
+
+</body>
+</html>

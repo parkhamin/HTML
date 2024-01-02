@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function get(){
+		let index, s;
+		index = document.getElementById("a").selectedIndex;
+		s = document.getElementById("a").options[index].value;
+		document.getElementById("result").value = s;
+	}
+
+</script>
+</head>
+<body>
+<select id="a">
+	<option value="학생">학생<option>
+	<option value="직장인" selected>직장인<option>
+	<option value="전문직">전문직<option>
+	<option value="무직">무직<option>
+</select>
+<input type="button" onclick="get()" value="click">
+<input type="text" value="" id="result">
+</body>
+</html>
