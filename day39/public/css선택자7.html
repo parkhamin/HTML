@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<style>
+	/* table 태그를 사용하면 브라우저가 tbody 태그를 자동으로 추가함
+		-> 왠만하면 자손 선택자를 사용하지 않은 것이 좋음
+	*/
+		table> tbody > tr > th{color:red;}
+	</style>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>이름</th>
+			<th>지역</th>
+		</tr>
+		<tr>
+			<td>홍길동</td>
+			<td>서울시 서대문구</td>
+		</tr>
+	</table>
+</body>
+</html>

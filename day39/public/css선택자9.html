@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<style>
+	/*상태 선택자
+		-> :enabled(사용가능한 input태그) 
+		   :disabled(사용불가능한 input태그) 
+		   :focus(포커스가 옮겨진 input태그) 
+		   :checked(체크 상태의 input태그)
+	*/
+	input:enabled{background-color:yellow;}
+	
+	input:disabled{background-color:red;}
+	
+	input:focus{background-color:oranger;}
+	</style>
+</head>
+<body>
+	<h2>사용 가능</h2>
+	<input>
+	<h2>사용 불가능</h2>
+	<input disabled="disabled">
+</body>
+</html>
