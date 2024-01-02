@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	let a = 123;	document.write(a+"<br>"); 	// 정수
+	a = 123.45;		document.write(a+"<br>");	// 실수
+	a = 123e3;		document.write(a+"<br>");	// 지수식표현
+	a = 123e-3;		document.write(a+"<br>");
+	document.write(typeof a+"<br><br>");
+	
+	a = (10 < 15);	document.write(a+"<br>");
+	a = (10 > 15);	document.write(a+"<br>");
+	document.write(typeof a+"<br><br>");
+	
+	a = "apple";	document.write(a+"<br>");
+	a = 'apple';	document.write(a+"<br>");
+	a = "I like an 'apple'."; document.write(a+"<br>");
+	// ""안에 ''를 넣을 수 있음.
+	document.write(typeof a+"<br><br>");
+		
+	// `${변수}` -> 변수의 있는 값을 문자열로 변환( template literal ) 
+	a = 10;
+	let b = `number ${a}번`;
+	document.write(b+"<br>");
+	
+	document.write(`number ${a}번<br>`);
+	
+
+</script>
+</body>
+</html>
+
+
+

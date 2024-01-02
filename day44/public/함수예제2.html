@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+<h1 id="a"></h1>
+<script>
+	let x,y,input;
+	
+	input = prompt("정수를 입력하시오","정수로");
+	x = parseInt(input);
+	
+	input = prompt("정수를 입력하시오","정수로");
+	y = parseInt(input);
+	
+	// 바꾸려는 요소가 script 태그 뒤에 오면 안바뀜.
+	document.getElementById("a").innerHTML = x+y;
+</script>
+
+</body>
+</html>

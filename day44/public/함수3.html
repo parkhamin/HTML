@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	function calc(){
+		let x = document.getElementById("x").value;
+		let y = document.getElementById("y").value;
+		let sum = parseInt(x)+parseInt(y);
+		
+		document.getElementById("sum").value = sum;
+	}
+</script>
+</head>
+<body>
+<h1>덧셈 계산기</h1>
+<form>
+	1st number: <input id="x" type="text"><br>
+	2nd number: <input id="y" type="text"><br>
+	sum: <input id="sum" type="text"><br>
+	<input type="button" value="plus" onclick="calc()">
+</form>
+</body>
+</html>

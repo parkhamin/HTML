@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	// Math.random() -> 0~1사이의 숫자를 리턴
+	let x = Math.random();
+	
+	document.write(x); // 0~1사이의 숫자를 랜덤 리턴
+	document.write(x * 256); // 0.00~256.00 -> 실수 
+	document.write(Math.floor( x * 256 ) ); // 0~256 -> 정수
+	let r = Math.floor(Math.random()*256);
+	
+	//document.body.style.background = `rgb(${r},${r},${r})`;
+
+</script>
+</body>
+</html>
