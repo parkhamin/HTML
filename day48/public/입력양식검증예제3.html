@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function validate(){
+	if ( isNotEmpty() ){
+		isChecked();
+		isNumeric();
+		isEmail();
+		isPassword();
+		verifyPassword();
+	}	
+}
+
+function isNotEmpty(){
+	let obj = document.getElementById("name");
+	let e = document.getElementById("nameError");
+	if ( obj.value.length == 0 ){
+		e.innerHTML = "이름을 입력하시오!";
+		obj.focus();
+		return false;
+	}
+	else{
+		e.innerHTML = "";
+		return true;
+	}
+}
+function isChecked(){
+	let arr = document.getElementsByName("gender");
+	let e = document.getElementById("genderError");
+	
+	let check = false;
+	
+	for ( i = 0 ; i < arr.length ; i++ ) {
+		if ( arr[i].checked ){
+			check = true;
+			break;
+		}		
+	}
+	if ( check == false ){
+		e.innerHTML = "성별을 체크하시오!";
+		arr[1].focus();
+	}else
+		e.innerHTML = "";
+}
+function isNumeric(){
+	let obj = document.getElementById("phone");
+	let e = document.getElementById("phoneError");
+	let exp = /^[0-9]+$/;
+	if ( !obj.value.match( exp ) ){
+		e.innerHTML = "올바른 전화번호를 입력하시오!";
+		obj.focus();
+	}
+	else{		
+		e.innerHTML = "";	
+	} 	
+}
+function isEmail(){
+	let obj = document.getElementById("email");
+	let e = document.getElementById("emailError");
+	
+	let atPosition = obj.value.indexOf('@'); // @이 없는 경우 -1리턴
+	let dotPosition = obj.value.indexOf('.'); // .이 없는 경우 -1리턴
+	
+	if ( atPosition > 0 && dotPosition > 0  ){
+		e.innerHTML = "";
+	}
+	else{				
+		e.innerHTML = "올바른 이메일을 입력하시오!";
+		obj.focus();
+	} 	
+}
+function isPassword(){
+	let obj = document.getElementById("password");
+	let e = document.getElementById("passwordError");
+			
+	if ( obj.value.length >= 6 && obj.value.length <= 8 ){
+		e.innerHTML = "";
+	}
+	else {
+		e.innerHTML = "패스워드의 길이가 길거나 짧습니다!";
+		obj.focus();
+	}
+}
+function verifyPassword(){
+	let obj = document.getElementById("pwVerified");
+	let e = document.getElementById("pwVerifiedError");
+	let obj2 = document.getElementById("password");
+	
+	if ( obj.value == obj2.value ) {
+		e.innerHTML = "";
+	}else{
+		e.innerHTML = "패스워드가 일치하지 않습니다!";
+		obj.focus();
+	}	
+}
+</script>
+</head>
+<body>
+<h1>회원 신청서</h1>
+<form>
+	<table>
+		<tr>
+			<td>이름<span>*</span></td>
+			<td><input type="text" id="name"></td>
+			<td id="nameError">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>성별<span>*</span></td>
+			<td>
+			<input type="radio" name="gender" value="m">남성
+			<input type="radio" name="gender" value="f">여성
+			</td>
+			<td id="genderError">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>휴대폰 번호<span>*</span></td>
+			<td><input type="text" id="phone"></td>
+			<td id="phoneError">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>이메일<span>*</span></td>
+			<td><input type="text" id="email"></td>
+			<td id="emailError">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>패스워드<span>*</span></td>
+			<td><input type="password" id="password"></td>
+			<td id="passwordError">&nbsp;</td>
+		</tr>	
+		<tr>
+			<td>패스워드 검증<span>*</span></td>
+			<td><input type="password" id="pwVerified"></td>
+			<td id="pwVerifiedError">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+			<input type="button" id="submit" value="제출" onclick="validate()">&nbsp;
+			<input type="button" id="reset" value="지우기">
+			</td>
+			<td>&nbsp;</td>
+		</tr>				
+	</table>
+</form>
+</body>
+</html>

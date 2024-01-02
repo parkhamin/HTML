@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>load이벤트</h1>
+<p>HTML문서가 loading 완료되면 -> load이벤트 발생</p>
+<p>유저가 웹페이지를 떠나면 -> unload이벤트 발생</p>
+
+<img id="image" src="summer.jpg" width="300" onload="loadImage()"><br>
+<script>
+function loadImage(){
+	let w = document.getElementById("image").clientWidth;
+	document.getElementById("result").innerHTML="이미지폭은 "+w;
+}
+</script>
+<div id="result"></div>
+</body>
+</html>

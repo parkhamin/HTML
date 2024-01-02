@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	// isNaN(문자열) -> 문자열이 숫자가 아니면 true, 
+	// 숫자(또는 숫자들로만 구성된 문자열)이면 false
+// 	document.write( isNaN('abc') +"<br>");
+// 	document.write( isNaN('100') +"<br>");
+// 	document.write( isNaN(100) +"<br>");
+	function check(){
+		let value = document.getElementById("test").value;
+		let s = "";
+		
+		if ( isNaN(value) || parseInt(value) < 1 || parseInt(value) > 100 ) 
+			s = "입력값이 올바르지 않습니다.";
+		else 
+			s = "올바른 입력값이니다.";		
+		
+		document.getElementById("result").innerHTML = s;
+	}
+</script>
+
+</head>
+<body>
+<p>1부터 100사이의 정수를 입력하시오.</p>
+<input id="test">
+<button onclick="check()">제출</button>
+<p id="result"></p>
+</body>
+</html>
+
+
+
+
+
+

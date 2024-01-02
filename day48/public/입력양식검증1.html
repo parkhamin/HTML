@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+</head>
+<body>
+<script>
+	function check_Empty(field){
+		let obj = document.getElementById(field);
+		if ( obj.value.length == 0 ){
+			alert("입력필드가 비었습니다.");
+		}
+	}
+</script>
+<form>
+<!-- 
+	이름:<input type="text" id="user">
+	<input type="button" value="확인" onclick="check_Empty('user')">
+ -->
+ 	이름:<input type="text" id="user" required>
+	<input type="submit" value="제출"> 
+</form>
+</body>
+</html>
